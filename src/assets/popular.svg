@@ -1,0 +1,8 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="220px" height="40px">
+<path fill-rule="evenodd"  fill="rgb(39, 174, 95)"
+ d="M219.996,0.001 L0.381,0.001 L-0.001,31.429 L109.967,40.000 L219.996,31.429 L219.996,0.001 Z"/>
+ <text x="60" y="23" font-family="sans-serif" font-weight="bold" font-size="16px" fill="white">Most Popular</text>
+</svg>

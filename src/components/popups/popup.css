@@ -1,0 +1,20 @@
+.city__list ul > li {
+  color: #4a4a4a;
+  font-weight: 500;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.city__list ul > li:hover {
+  transform: scale(1.05);
+  font-weight: 700;
+}
+
+.popup {
+  position: absolute;
+  right: 30%;
+  top: 45px;
+  margin: 0 auto;
+  z-index: 1;
+}

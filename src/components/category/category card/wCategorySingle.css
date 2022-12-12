@@ -1,0 +1,7 @@
+.content__right {
+  clip-path: ellipse(99% 140px at 100% 50%);
+}
+
+.toggle__content ul li {
+  cursor: pointer;
+}

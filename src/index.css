@@ -1,0 +1,134 @@
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-next::after,
+.swiper-rtl .swiper-button-prev::after {
+  content: "next";
+  font-size: 14px !important;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 100%;
+  color: #4a4a4a;
+  font-weight: bold;
+  box-shadow: 1px 0px 3px 5px rgba(0, 0, 0, 0.03);
+}
+
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after {
+  content: "prev";
+  font-size: 14px !important;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 100%;
+  color: #4a4a4a;
+  font-weight: bold;
+  box-shadow: 1px 0px 3px 5px rgba(0, 0, 0, 0.03);
+}
+
+.swiper-slide-active {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.e-date-wrapper {
+  border: none !important;
+  border-bottom: 1px solid #d7d7d7 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  width: 15px !important;
+  height: 15px !important;
+  border: 1px solid #e72e77 !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 15px !important;
+  height: 15px !important;
+  background: #e72e77 !important;
+}
+
+.react-datepicker__header {
+  background: #e72e77 !important;
+}
+
+.react-datepicker__current-month {
+  color: white !important;
+}
+
+.react-datepicker__day-name {
+  color: white !important;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  border-radius: 100% !important;
+  background-color: #e72e77 !important;
+  color: #fff !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+  border-radius: 100% !important;
+  background-color: #e72e77 !important;
+  color: #fff !important;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
