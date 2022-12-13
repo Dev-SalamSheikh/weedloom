@@ -2,7 +2,7 @@ import React from "react";
 
 const MessageSender = ({ name, text, date, img }) => {
   return (
-    <div className="border-b border-b-paginationBg-900 py-2 px-2 flex gap-1 items-center cursor-pointer hover:bg-tagsBackground-900 hover:text-white">
+    <div className="border-b border-b-paginationBg-900 py-2 px-2 flex items-center cursor-pointer hover:bg-tagsBackground-900 hover:text-white">
       {/* Image */}
       <div className="w-3/12">
         <img src={img} alt="avatar" className="w-12 h-12 rounded-full" />

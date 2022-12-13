@@ -80,16 +80,12 @@ const Chatbox = () => {
             <div>
               <label
                 htmlFor="file"
-                className="text-base text-textSecondary-900"
+                className="text-xs border-l border-l-paginationBg-900 text-textSecondary-900 flex items-center gap-1 pl-1"
               >
-                <i className="fa-solid fa-paperclip cursor-pointer"></i>
+                <i className="fa-solid fa-paperclip cursor-pointer text-sm"></i>{" "}
+                Attachments
               </label>
-              <input
-                type="file"
-                id="file"
-                style={{ display: "none" }}
-                accept=".png, .jpeg, .jpg"
-              />
+              <input type="file" id="file" style={{ display: "none" }} />
             </div>
           </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomarMessage = ({ text, img }) => {
   return (
-    <div className="mt-4 flex gap-3">
+    <div className="mt-4 flex">
       {/* Avatar */}
       <div className="w-1/12">
         <img
