@@ -17,7 +17,7 @@ const ImageUpload = () => {
       {/* Heading */}
       <div className="bg-sectionBg-900 px-4 py-3">
         <NavLink to="/vendor/profile/projects/portfolio">
-          <h2 className="text-textSecondary-900 text-lg cursor-pointer">
+          <h2 className="text-textSecondary-900 lg:text-lg cursor-pointer">
             {" "}
             <i className="fa-solid fa-arrow-left-long mr-1"></i> Upload Images
             to Portfolio

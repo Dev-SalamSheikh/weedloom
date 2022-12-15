@@ -6,7 +6,7 @@ const VendorReviewsContainer = () => {
   return (
     <div>
       <div className="bg-sectionBg-900 px-2 py-3">
-        <h2 className="text-textSecondary-900 text-lg">
+        <h2 className="text-textSecondary-900 lg:text-lg">
           Reviews from Customar
         </h2>
       </div>

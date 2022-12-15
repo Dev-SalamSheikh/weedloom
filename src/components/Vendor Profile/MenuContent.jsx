@@ -52,7 +52,7 @@ const MenuContent = () => {
     <div className="w-full h-full">
       {/* Heading */}
       <div className="bg-sectionBg-900 px-2 py-3">
-        <h2 className="text-textSecondary-900 text-lg font-medium">
+        <h2 className="text-textSecondary-900 lg:text-lg font-medium">
           Menu Files
         </h2>
       </div>
@@ -61,7 +61,7 @@ const MenuContent = () => {
       <div className="px-6 my-8">
         <NavLink to={"/vendor/profile/menu/image-upload"}>
           <div
-            className={`w-56 h-64 cursor-pointer text-white font-semibold flex justify-center items-center text-center rounded-md`}
+            className={`w-full lg:w-56 lg:h-64 h-56 cursor-pointer text-white font-semibold flex justify-center items-center text-center rounded-md`}
             style={{
               background: `url(${AddImage})`,
               backgroundSize: "cover",
@@ -81,10 +81,12 @@ const MenuContent = () => {
       <div>
         {/* Heading */}
         <div className="bg-sectionBg-900 px-4 py-2 flex justify-between items-center">
-          <h2 className="text-textSecondary-900 text-lg font-medium">Menu</h2>
+          <h2 className="text-textSecondary-900 lg:text-lg font-medium">
+            Menu
+          </h2>
           <button
             onClick={() => setOpenPopup(true)}
-            className={`border border-paginationBg-900 py-1 px-2 text-sm rounded-sm`}
+            className={`border border-paginationBg-900 py-1 px-2 text-xs lg:text-sm rounded-sm`}
           >
             Add Menu
           </button>
@@ -93,7 +95,7 @@ const MenuContent = () => {
         {/* Menu Content */}
         <div className="w-full">
           {/* Heading */}
-          <div className="px-4 py-3 border-b border-b-paginationBg-900 font-semibold text-textSecondary-900 flex justify-between items-center text-[15px]">
+          <div className="px-4 py-3 border-b border-b-paginationBg-900 font-semibold text-textSecondary-900 flex justify-between items-center text-xs lg:text-[15px]">
             <div className="w-3/12">
               <p>Title</p>
             </div>
@@ -115,7 +117,7 @@ const MenuContent = () => {
             data.map((D, i) => (
               <div
                 key={i}
-                className="px-4 py-3 border-b border-b-paginationBg-900 font-medium text-textSecondary-900 flex justify-between items-center text-sm"
+                className="px-4 py-3 border-b border-b-paginationBg-900 font-medium text-textSecondary-900 flex justify-between items-center text-xs lg:text-sm"
               >
                 <div className="w-3/12">
                   <p>{D.name}</p>
@@ -145,21 +147,21 @@ const MenuContent = () => {
       {/* Popup */}
       {openPopup && (
         <div className="w-screen h-screen bg-black bg-opacity-70 fixed top-0 right-0 flex justify-center items-center">
-          <div className="flex items-start gap-2 w-[40%]">
+          <div className="flex lg:items-start items-end gap-2 w-full px-4 lg:w-[40%] flex-col-reverse">
             <div className="w-full h-max bg-white text-black px-6 py-4 rounded-md">
               <div className="flex justify-center mb-4">
                 <img
                   src="https://www.svgrepo.com/show/54204/restaurant.svg"
                   alt=""
-                  className="w-16"
+                  className="w-14 lg:w-16"
                 />
               </div>
               {/* Heading */}
-              <h2 className="text-textSecondary-900 text-xl font-semibold text-center">
+              <h2 className="text-textSecondary-900 text-base lg:text-xl font-semibold text-center">
                 Add New Menu
               </h2>
 
-              <div className="mt-6">
+              <div className="mt-4 lg:mt-6">
                 <form onSubmit={formSubmitted}>
                   {/* Menu Name Input */}
                   <div className="mb-2">
@@ -175,7 +177,7 @@ const MenuContent = () => {
                       required
                       placeholder="Menu Title*"
                       maxLength={15}
-                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 placeholder:text-textSecondary-900"
+                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 placeholder:text-textSecondary-900"
                     />
                   </div>
 
@@ -192,7 +194,7 @@ const MenuContent = () => {
                           })
                         }
                         required
-                        className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 bg-transparent"
+                        className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 bg-transparent"
                       >
                         <option>Select Menu Type*</option>
                         <option value="Standard">Standard</option>
@@ -213,7 +215,7 @@ const MenuContent = () => {
                         type="number"
                         required
                         placeholder="Price / Plate*"
-                        className="pl-1 w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 placeholder:text-textSecondary-900"
+                        className="pl-1 w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 placeholder:text-textSecondary-900"
                       />
                     </div>
                   </div>
@@ -224,7 +226,7 @@ const MenuContent = () => {
                       Menu Description
                     </h5>
                     {/* Select Dropdown Div */}
-                    <div className="flex justify-between items-center gap-6 mt-2">
+                    <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-6 gap-2 mt-2">
                       {/* Starters */}
                       <div className="w-full">
                         <select
@@ -236,7 +238,7 @@ const MenuContent = () => {
                             })
                           }
                           required
-                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 bg-transparent"
+                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 bg-transparent"
                         >
                           <option value="not-selected">Starters</option>
                           <option value="starters-1">1</option>
@@ -273,7 +275,7 @@ const MenuContent = () => {
                             })
                           }
                           required
-                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 bg-transparent"
+                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 bg-transparent"
                         >
                           <option value="not-selected">Main Course</option>
                           <option value="maincourse-1">1</option>
@@ -310,7 +312,7 @@ const MenuContent = () => {
                             })
                           }
                           required
-                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 bg-transparent"
+                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 bg-transparent"
                         >
                           <option value="not-selected">Soup / Salads</option>
                           <option value="soup&salad-1">1</option>
@@ -347,7 +349,7 @@ const MenuContent = () => {
                             })
                           }
                           required
-                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 bg-transparent"
+                          className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 bg-transparent"
                         >
                           <option value="not-selected">Desserts</option>
                           <option value="desserts-1">1</option>
@@ -379,7 +381,7 @@ const MenuContent = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-textPrimary-900 text-white py-3 text-sm font-semibold"
+                      className="w-full bg-textPrimary-900 text-white py-3 text-xs lg:text-sm font-semibold"
                     >
                       Submit
                     </button>
@@ -401,7 +403,7 @@ const MenuContent = () => {
       {/* Delete Popup Modal */}
       {deletedPopup && (
         <div className="w-screen py-1 bg-green-600 text-white absolute top-0 right-0 text-center">
-          <span className="text-sm font-semibold">
+          <span className="text-xs lg:text-sm font-semibold">
             Menu Has been Deleted Successfully!
           </span>
         </div>

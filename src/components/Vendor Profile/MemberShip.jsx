@@ -20,21 +20,21 @@ const MemberShip = () => {
   return (
     <div>
       {/* Heading */}
-      <div className="bg-sectionBg-900 px-2 py-3 flex justify-between items-center">
+      <div className="bg-sectionBg-900 px-2 py-3 flex flex-col lg:flex-row justify-between lg:items-center">
         <div>
-          <h5 className="text-textSecondary-900 text-[15px]">
+          <h5 className="text-textSecondary-900 text-[14px] lg:text-[15px]">
             Membership Packages
           </h5>
-          <p className="text-textSecondary-900 text-[13px]">
+          <p className="text-textSecondary-900 text-[11px] lg:text-[13px]">
             (To know more about how to increase your visibility on our platform,
             reach us on vendors@weedloom.com or +92-9080-581-008)
           </p>
         </div>
 
         {/* Buttons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mt-2 lg:mt-0">
           <button
-            className={`border p-2 px-4 text-sm rounded-sm ${
+            className={`border p-2 px-4 text-xs lg:text-sm rounded-sm ${
               monthly
                 ? "bg-textPrimary-900 text-white"
                 : "text-textSecondary-900"
@@ -44,7 +44,7 @@ const MemberShip = () => {
             Monthly
           </button>
           <button
-            className={`border p-2 px-4 text-sm ${
+            className={`border p-2 px-4 text-xs lg:text-sm ${
               yearly
                 ? "bg-textPrimary-900 text-white"
                 : "text-textSecondary-900"

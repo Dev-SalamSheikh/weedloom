@@ -10,7 +10,7 @@ const Chatbox = () => {
         {/* Left */}
         <div className="w-full">
           {/* Name */}
-          <h2 className="text-textSecondary-900 font-bold mb-[4px]">
+          <h2 className="text-textSecondary-900 lg:text-base text-sm font-bold mb-[4px]">
             Junaid Asghar
           </h2>
           <p
@@ -66,23 +66,23 @@ const Chatbox = () => {
         </div>
 
         {/* SendBox */}
-        <div className="bg-white h-[74px] px-4 flex justify-between items-center">
+        <div className="bg-white h-[74px] lg:px-4 px-1 flex justify-between items-center">
           {/* Upper Part */}
           <div className="w-full border border-paginationBg-900 flex gap-4 items-center justify-between px-2 rounded-l">
             <div className="w-full">
               <input
                 type="text"
                 placeholder="Write Message..."
-                className="w-full text-textSecondary-900 outline-none text-sm py-3 focus:border-textPrimary-900 rounded-sm"
+                className="w-full text-textSecondary-900 outline-none text-xs lg:text-sm py-3 focus:border-textPrimary-900 rounded-sm"
                 maxLength={100}
               />
             </div>
             <div>
               <label
                 htmlFor="file"
-                className="text-xs border-l border-l-paginationBg-900 text-textSecondary-900 flex items-center gap-1 pl-1"
+                className="text-[10px] lg:text-xs border-l border-l-paginationBg-900 text-textSecondary-900 flex items-center gap-1 pl-1"
               >
-                <i className="fa-solid fa-paperclip cursor-pointer text-sm"></i>{" "}
+                <i className="fa-solid fa-paperclip cursor-pointer text-[10px] lg:text-sm"></i>{" "}
                 Attachments
               </label>
               <input type="file" id="file" style={{ display: "none" }} />
@@ -92,7 +92,7 @@ const Chatbox = () => {
           {/* button */}
           <div className="w-max">
             <button
-              className="text-white text-sm font-semibold bg-textPrimary-900 px-4 flex items-center gap-1 py-[13px] rounded-tr rounded-br"
+              className="text-white text-xs lg:text-sm font-semibold bg-textPrimary-900 px-4 flex items-center gap-1 py-[13px] rounded-tr rounded-br"
               type="submit"
             >
               Send <i className="fa-regular fa-paper-plane"></i>

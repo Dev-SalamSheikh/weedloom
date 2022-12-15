@@ -46,10 +46,10 @@ const Banquets = () => {
     <div className="w-full h-full">
       {/* Heading */}
       <div className="bg-sectionBg-900 px-4 py-3 flex justify-between items-center">
-        <h2 className="text-textSecondary-900 text-lg">Banquets</h2>
+        <h2 className="text-textSecondary-900 lg:text-lg">Banquets</h2>
         <button
           onClick={() => setOpenPopup(true)}
-          className={`border border-paginationBg-900 py-2 px-4 text-sm rounded-sm`}
+          className={`border border-paginationBg-900 py-2 px-4 text-xs lg:text-sm rounded-sm`}
         >
           Add Bunquets
         </button>
@@ -59,13 +59,13 @@ const Banquets = () => {
       <div className="w-full h-full">
         {/* Initial Div */}
         {data.length < 1 && (
-          <div className="flex items-center flex-col my-16 gap-4">
-            <p className="text-textSecondary-900 font-semibold">
+          <div className="flex items-center flex-col my-8 lg:my-16 gap-4">
+            <p className="text-textSecondary-900 font-semibold lg:text-base text-sm">
               No Banquets found. Add a new banquet
             </p>
             <button
               onClick={() => setOpenPopup(!openPopup)}
-              className={`bg-textPrimary-900 text-white border border-paginationBg-900 py-2 px-4 text-sm rounded-sm`}
+              className={`bg-textPrimary-900 text-white border border-paginationBg-900 py-2 px-4 text-xs lg:text-sm rounded-sm`}
             >
               Add Bunquets
             </button>
@@ -76,27 +76,27 @@ const Banquets = () => {
           <>
             <div className="w-full flex justify-between px-4 border-b-paginationBg-900 border-b mt-4 pb-2">
               <div className="w-[20%]">
-                <p className="font-semibold text-textSecondary-900 text-[15px]">
+                <p className="font-semibold text-textSecondary-900 text-xs lg:text-[15px]">
                   Title
                 </p>
               </div>
               <div className="w-[20%]">
-                <p className="font-semibold text-textSecondary-900 text-[15px]">
+                <p className="font-semibold text-textSecondary-900 text-xs lg:text-[15px]">
                   Type
                 </p>
               </div>
               <div className="w-[20%]">
-                <p className="font-semibold text-textSecondary-900 text-[15px]">
+                <p className="font-semibold text-textSecondary-900 text-xs lg:text-[15px]">
                   Fixed Capacity
                 </p>
               </div>
               <div className="w-[20%]">
-                <p className="font-semibold text-textSecondary-900 text-[15px]">
+                <p className="font-semibold text-textSecondary-900 text-xs lg:text-[15px]">
                   Float Capacity
                 </p>
               </div>
               <div className="w-[20%] text-end">
-                <p className="font-semibold text-textSecondary-900 text-[15px]">
+                <p className="font-semibold text-textSecondary-900 text-xs lg:text-[15px]">
                   Actions
                 </p>
               </div>
@@ -108,22 +108,22 @@ const Banquets = () => {
                 className="w-full flex items-center px-4 py-2 border-b border-b-paginationBg-900"
               >
                 <div className="w-[20%]">
-                  <p className="text-sm font-medium text-textSecondary-900">
+                  <p className="text-xs lg:text-sm font-medium text-textSecondary-900">
                     {v.name}
                   </p>
                 </div>
                 <div className="w-[20%]">
-                  <p className="text-sm font-medium text-textSecondary-900">
+                  <p className="text-xs lg:text-sm font-medium text-textSecondary-900">
                     {v.fixedC}
                   </p>
                 </div>
                 <div className="w-[20%]">
-                  <p className="text-sm font-medium text-textSecondary-900">
+                  <p className="text-xs lg:text-sm font-medium text-textSecondary-900">
                     {v.floatC}
                   </p>
                 </div>
                 <div className="w-[20%]">
-                  <p className="text-sm font-medium text-textSecondary-900">
+                  <p className="text-xs lg:text-sm font-medium text-textSecondary-900">
                     {v.vendorType}
                   </p>
                 </div>
@@ -143,17 +143,18 @@ const Banquets = () => {
 
       {openPopup && (
         <div className="w-screen h-screen bg-black bg-opacity-70 fixed top-0 right-0 flex justify-center items-center">
-          <div className="flex items-start gap-2">
-            <div className="min-w-[400px] h-max bg-white text-black px-6 py-4 rounded-md">
+          <div className="flex flex-col-reverse lg:flex-row items-end justify-center lg:items-start gap-2 w-full px-4 lg:px-0">
+            {/* Content */}
+            <div className="w-full lg:max-w-[400px] h-max bg-white text-black px-6 py-4 rounded-md">
               <div className="flex justify-center mb-4">
                 <img
                   src="https://www.svgrepo.com/show/16895/wedding-cake.svg"
                   alt=""
-                  className="w-16"
+                  className="w-14 lg:w-16"
                 />
               </div>
               {/* Heading */}
-              <h2 className="text-textSecondary-900 text-xl font-semibold text-center">
+              <h2 className="text-textSecondary-900 lg:text-xl font-semibold text-center">
                 Add New Banquet
               </h2>
 
@@ -173,7 +174,7 @@ const Banquets = () => {
                       required
                       placeholder="Name*"
                       maxLength={15}
-                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900"
+                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900"
                     />
                   </div>
 
@@ -190,7 +191,7 @@ const Banquets = () => {
                       type="number"
                       required
                       placeholder="Fixed Capacity*"
-                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900"
+                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900"
                     />
                   </div>
 
@@ -207,7 +208,7 @@ const Banquets = () => {
                       type="number"
                       required
                       placeholder="Floating Capacity*"
-                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900"
+                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900"
                     />
                   </div>
 
@@ -222,7 +223,7 @@ const Banquets = () => {
                         })
                       }
                       required
-                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-[13px] font-medium text-textSecondary-900 bg-transparent"
+                      className="w-full outline-none border-b border-b-paginationBg-900 focus:border-b-textPrimary-900 pb-2 text-xs lg:text-[13px] font-medium text-textSecondary-900 bg-transparent"
                     >
                       <option>Select Banquete</option>
                       <option value="indoor">Indoor</option>
@@ -236,7 +237,7 @@ const Banquets = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-textPrimary-900 text-white py-3 text-sm font-semibold"
+                      className="w-full bg-textPrimary-900 text-white py-3 text-xs lg:text-sm font-semibold"
                     >
                       Submit
                     </button>
@@ -258,7 +259,7 @@ const Banquets = () => {
       {/* Delete Popup Modal */}
       {deletedPopup && (
         <div className="w-screen py-1 bg-green-600 text-white absolute top-0 right-0 text-center">
-          <span className="text-sm font-semibold">
+          <span className="text-xs lg:text-sm font-semibold">
             Banquet Has been Deleted!
           </span>
         </div>

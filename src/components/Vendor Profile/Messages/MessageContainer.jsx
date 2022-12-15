@@ -147,7 +147,7 @@ const MessageContainer = () => {
   return (
     <div className="w-full max-h-[75vh] flex">
       {/* Left Side */}
-      <div className="w-[25%] h-full border-r-paginationBg-900 border-r">
+      <div className="w-full md:w-[35%] lg:w-[25%] h-full border-r-paginationBg-900 border-r">
         {/* <MessageSidebar /> */}
         <div className="max-h-[75vh] overflow-y-scroll">
           {/* SearchBar */}
@@ -160,10 +160,28 @@ const MessageContainer = () => {
             <i className="fa-solid fa-magnifying-glass"></i>
           </div>
 
-          {/* Message Components */}
-          <div>
+          {/* Desktop Message Components */}
+          <div className="hidden md:block">
             {senderData.map((data) => (
               <NavLink to={`${data.name.split(" ").splice(0, 1)}`}>
+                <MessageSender
+                  img={data.img}
+                  date={data.date}
+                  name={data.name}
+                  text={data.text}
+                />
+              </NavLink>
+            ))}
+          </div>
+
+          {/* Mobile Messages */}
+          <div className="block md:hidden">
+            {senderData.map((data) => (
+              <NavLink
+                to={`/vendor/profile/mobilemessage/${data.name
+                  .split(" ")
+                  .splice(0, 1)}`}
+              >
                 <MessageSender
                   img={data.img}
                   date={data.date}
@@ -177,7 +195,7 @@ const MessageContainer = () => {
       </div>
 
       {/* Right Side */}
-      <div className="w-[75%]">
+      <div className="w-[75%] hidden md:block">
         <Outlet />
       </div>
     </div>

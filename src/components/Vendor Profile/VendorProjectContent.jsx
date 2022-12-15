@@ -6,7 +6,7 @@ const VendorProjectContent = () => {
     <div>
       {/* Heading */}
       <div className="bg-sectionBg-900 px-4 py-3">
-        <h2 className="text-textSecondary-900 text-lg">Projects</h2>
+        <h2 className="text-textSecondary-900 lg:text-lg">Projects</h2>
       </div>
 
       {/* Content */}
@@ -16,7 +16,7 @@ const VendorProjectContent = () => {
         {/* Navlinks */}
         <NavLink to="/vendor/profile/projects/portfolio">
           <div
-            className="w-72 h-56 flex justify-center items-center cursor-pointer rounded-md"
+            className="lg:w-72 w-full h-56 flex justify-center items-center cursor-pointer rounded-md"
             style={{
               background:
                 "radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('https://img.freepik.com/free-photo/abstract-blur-wedding-hall_74190-5229.jpg?w=1380&t=st=1670178252~exp=1670178852~hmac=c1f6d7158f8e07a88aafb0278bf8ddab3cb1da46714147cc1983a74b8ff52247')",
@@ -25,7 +25,9 @@ const VendorProjectContent = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <span className="text-2xl text-white font-medium">Portfolio</span>
+            <span className="text-xl lg:text-2xl text-white font-medium">
+              Portfolio
+            </span>
           </div>
         </NavLink>
 

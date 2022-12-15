@@ -5,7 +5,7 @@ const ReviewCardWithoutReply = ({ image, name }) => {
   const [viewLess, setViewLess] = useState(false);
   return (
     <>
-      <div className="w-full py-6 px-5">
+      <div className="w-full py-6 px-3 lg:px-5">
         <div className="review__card__content">
           <div className="review_card_heading flex justify-between items-center">
             <div className="heading_left flex gap-4 w-full justify-between lg:justify-start lg:w-max">
@@ -13,16 +13,20 @@ const ReviewCardWithoutReply = ({ image, name }) => {
                 <img
                   src={image}
                   alt="bride_image"
-                  className="w-14 h-14 rounded-full"
+                  className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
                 />
                 <div className="name">
-                  <h5 className="text-textBlack-900 font-bold mb-1">{name}</h5>
-                  <p className="text-textSecondary-900 text-sm">4 months ago</p>
+                  <h5 className="text-textBlack-900 font-bold mb-1 lg:text-base text-sm">
+                    {name}
+                  </h5>
+                  <p className="text-textSecondary-900 text-xs lg:text-sm">
+                    4 months ago
+                  </p>
                 </div>
               </div>
 
               <div className="overall__rating flex items-center justify-center">
-                <span className="bg-textPrimary-900 p-1 text-white font-semibold">
+                <span className="bg-textPrimary-900 p-1 text-white font-semibold lg:text-base text-sm">
                   <i className="fa-solid fa-star mr-2"></i>
                   5.0
                 </span>
@@ -50,7 +54,7 @@ const ReviewCardWithoutReply = ({ image, name }) => {
             </div>
           </div>
           <div className="review_content mt-4">
-            <div className="initial_view h-14 overflow-hidden pr-5 text-textSecondary-900 leading-7 font-normal text-sm">
+            <div className="initial_view h-14 overflow-hidden pr-5 text-textSecondary-900 leading-7 font-normal text-xs lg:text-sm">
               <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur illum aliquid voluptate autem, ipsum reprehenderit
@@ -63,7 +67,7 @@ const ReviewCardWithoutReply = ({ image, name }) => {
             </div>
 
             {viewLess && (
-              <div className="hidden_view text-textSecondary-900 leading-7 font-normal text-sm pr-5">
+              <div className="hidden_view text-textSecondary-900 leading-7 font-normal text-xs lg:text-sm pr-5">
                 <span>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptatum in tempora adipisci accusamus quisquam quam
@@ -77,7 +81,7 @@ const ReviewCardWithoutReply = ({ image, name }) => {
               </div>
             )}
             <span
-              className="text-sm font-bold text-textSecondary-900 cursor-pointer"
+              className="text-xs lg:text-sm font-bold text-textSecondary-900 cursor-pointer"
               onClick={() => setViewLess(!viewLess)}
             >
               {viewLess ? "Read Less.." : "..Read More"}
@@ -108,20 +112,20 @@ const ReviewCardWithoutReply = ({ image, name }) => {
 
       {/* Reply Card */}
       <div
-        className="w-full bg-copyrightFooter-900 px-6 pb-3 text-textSecondary-900 border-b border-t border-paginationBg-900
+        className="w-full bg-copyrightFooter-900 px-3 lg:px-6 pb-3 text-textSecondary-900 border-b border-t border-paginationBg-900
     "
       >
         <div className="review__content w-full mt-1">
-          <span className="text-textSecondary-900 font-semibold text-sm">
+          <span className="text-textSecondary-900 font-semibold text-xs lg:text-sm">
             Write a Reply
           </span>
-          <div className="admin flex gap-4 items-center mt-1">
+          <div className="admin flex flex-col lg:flex-row lg:gap-4 gap-2 lg:items-center mt-1">
             <textarea
               rows="5"
               maxLength="500"
-              className="w-full bg-transparent outline-none border text-sm resize-none p-2"
+              className="w-full bg-transparent outline-none border text-xs lg:text-sm resize-none p-2"
             ></textarea>
-            <button className="text-white bg-textPrimary-900 py-2 rounded-md w-[10%] text-sm">
+            <button className="text-white bg-textPrimary-900 py-2 px-6 lg:px-0 rounded-md w-max lg:w-[10%] text-xs lg:text-sm">
               Reply <i className="fa-solid fa-share"></i>
             </button>
           </div>

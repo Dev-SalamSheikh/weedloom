@@ -29,6 +29,7 @@ import MenuContent from "./components/Vendor Profile/MenuContent";
 import MessageContainer from "./components/Vendor Profile/Messages/MessageContainer";
 import Chatbox from "./components/Vendor Profile/Messages/Chatbox";
 import GetBackMsg from "./components/Vendor Profile/Messages/GetBackMsg";
+import MobileMessage from "./components/Vendor Profile/Messages/MobileMessage";
 
 function App() {
   return (
@@ -57,6 +58,8 @@ function App() {
               <Route index element={<GetBackMsg />} />
               <Route path=":id" element={<Chatbox />} />
             </Route>
+            {/* For Mobile Message Route */}
+            <Route path="mobilemessage/:id" element={<MobileMessage />} />
             <Route path="menu" element={<Menu />}>
               <Route index element={<MenuContent />} />
               <Route path="image-upload" element={<UploadImagetoMenu />} />

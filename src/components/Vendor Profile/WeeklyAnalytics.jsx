@@ -40,7 +40,7 @@ const WeeklyAnalytics = () => {
       amt: 2500,
     },
     {
-      name: "Friday",
+      name: "Fri",
       leads: 3490,
       views: 4300,
       amt: 2100,
@@ -54,9 +54,9 @@ const WeeklyAnalytics = () => {
       </div>
 
       {/* Lead box */}
-      <div className="mb-4 mt-10 px-6">
+      <div className="mb-4 lg:mt-10 lg:px-6 px-2 mt-2">
         {/* Heading */}
-        <span className="text-textSecondary-900">
+        <span className="text-textSecondary-900 lg:text-base text-sm">
           Dec Statistics ( Photographers - Lahore )
         </span>
         {/* LeadBox */}
@@ -64,17 +64,17 @@ const WeeklyAnalytics = () => {
           {/* Highest Lead */}
           <div className="w-full border border-paginationBg-900 text-center py-2 text-[#27AE5F]">
             <span className="text-sm font-semibold">Highest Lead</span>
-            <h2 className="text-3xl my-8">46</h2>
+            <h2 className="text-xl lg:text-3xl lg:my-8 my-3">46</h2>
           </div>
           {/* Average Lead */}
           <div className="w-full border border-x-0 border-paginationBg-900 text-center py-2 text-[#F5A623]">
             <span className="text-sm font-semibold">Average Lead</span>
-            <h2 className="text-3xl my-8">16</h2>
+            <h2 className="text-xl lg:text-3xl lg:my-8 my-3">16</h2>
           </div>
           {/* Your Lead */}
           <div className="w-full border border-paginationBg-900 text-center py-2 text-red-600">
             <span className="text-sm font-semibold">Lower Lead</span>
-            <h2 className="text-3xl my-8">8</h2>
+            <h2 className="text-xl lg:text-3xl lg:my-8 my-3">8</h2>
           </div>
         </div>
 
@@ -84,18 +84,18 @@ const WeeklyAnalytics = () => {
         <div className="mt-2 flex justify-between text-textSecondary-900">
           {/* Highest Lead */}
           <div className="w-full border border-paginationBg-900 text-center py-3">
-            <h2 className="text-3xl">0</h2>
-            <span className="text-sm">Your Lead</span>
+            <h2 className="lg:text-3xl text-xl">0</h2>
+            <span className="text-xs lg:text-sm">Your Lead</span>
           </div>
           {/* Average Lead */}
           <div className="w-full border border-x-0 border-paginationBg-900 text-center py-3">
-            <h2 className="text-3xl">0</h2>
-            <span className="text-sm">Love Count</span>
+            <h2 className="lg:text-3xl text-xl">0</h2>
+            <span className="text-xs lg:text-sm">Love Count</span>
           </div>
           {/* Your Lead */}
           <div className="w-full border border-paginationBg-900 text-center py-3">
-            <h2 className="text-3xl">1,860</h2>
-            <span className="text-sm">Page Views</span>
+            <h2 className="lg:text-3xl text-xl">1,860</h2>
+            <span className="text-xs lg:text-sm">Page Views</span>
           </div>
         </div>
       </div>

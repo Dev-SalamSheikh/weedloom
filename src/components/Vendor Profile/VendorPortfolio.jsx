@@ -9,11 +9,11 @@ const VendorPortfolio = () => {
   return (
     <div>
       {/* Heading */}
-      <div className="bg-sectionBg-900 px-6 py-3 flex justify-between items-center">
+      <div className="bg-sectionBg-900 px-2 lg:px-6 py-3 flex justify-between items-center">
         {/* Left */}
         <div>
           <NavLink to="/vendor/profile/projects">
-            <h2 className="text-textSecondary-900 text-lg cursor-pointer">
+            <h2 className="text-textSecondary-900 lg:text-lg cursor-pointer">
               {" "}
               <i className="fa-solid fa-arrow-left-long mr-1"></i> Portfolio
             </h2>
@@ -23,7 +23,7 @@ const VendorPortfolio = () => {
         {/* Right */}
         <div>
           <NavLink to="/imageupload/guideline">
-            <span className="text-sm font-medium text-textPrimary-900 cursor-pointer">
+            <span className="text-xs lg:text-sm font-medium text-textPrimary-900 cursor-pointer">
               View image upload guidelines
             </span>
           </NavLink>
@@ -31,7 +31,7 @@ const VendorPortfolio = () => {
       </div>
 
       {/* Content */}
-      <div className="px-6 pt-4 pb-14">
+      <div className="px-4 lg:px-6 pt-4 pb-14">
         {/* Check Items */}
         <div>
           <div className="flex gap-4 items-center">
@@ -47,7 +47,7 @@ const VendorPortfolio = () => {
             </div>
             <div>
               <label
-                className={`text-sm font-medium ${
+                className={`text-xs lg:text-sm font-medium ${
                   certified ? "text-[#27AE5F]" : "text-red-600"
                 }`}
                 htmlFor="certified"
@@ -62,7 +62,7 @@ const VendorPortfolio = () => {
 
         <NavLink to={certified ? "/vendor/profile/projects/image-upload" : ""}>
           <div
-            className={`mt-16 w-60 h-64 ${
+            className={`mt-16 w-full lg:w-60 h-64 ${
               certified ? "cursor-pointer" : "cursor-not-allowed"
             } text-white font-semibold flex justify-center items-center text-center`}
             style={{
