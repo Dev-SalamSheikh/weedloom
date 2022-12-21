@@ -5,7 +5,7 @@ const WeddingSetupBanner = () => {
   const [switchInput, setSwitchInput] = useState();
   return (
     <div
-      className="w-full h-[50vh] bg-no-repeat bg-cover bg-center relative"
+      className="w-full h-[60vh] bg-no-repeat bg-cover bg-center relative"
       style={{
         backgroundImage: `radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url("http://weddingpakistani.com/wp-content/uploads/2017/03/13094358_799603150140839_7487438520438918512_n.jpg")`,
