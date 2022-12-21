@@ -12,7 +12,7 @@ const WeddingSetupBanner = () => {
       }}
     >
       {/* Contents */}
-      <div className="container mx-auto h-full z-[1000] flex justify-between items-center">
+      <div className="container mx-auto w-10/12 h-full z-[1000] flex justify-between items-center">
         {/* Left Side */}
         <div className="w-full">
           <h1 className="text-5xl text-white font-medium">
