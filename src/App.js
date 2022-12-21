@@ -30,11 +30,20 @@ import MessageContainer from "./components/Vendor Profile/Messages/MessageContai
 import Chatbox from "./components/Vendor Profile/Messages/Chatbox";
 import GetBackMsg from "./components/Vendor Profile/Messages/GetBackMsg";
 import MobileMessage from "./components/Vendor Profile/Messages/MobileMessage";
+import UserProfile from "./pages/user profile/UserProfile";
+import UserSettings from "./components/user profile/UserSettings";
+import UserFinalizeVendor from "./components/user profile/UserFinalizeVendor";
+import UserShortlists from "./components/user profile/UserShortlists";
+import UserLove from "./components/user profile/UserLove";
+import UserChecklists from "./components/user profile/UserChecklists";
+import WeddingSetup from "./components/Wedding Setup/WeddingSetup";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
@@ -43,6 +52,7 @@ function App() {
               <Route path=":profile" element={<Profile />} />
             </Route>
           </Route>
+          {/* Vendor Profile Routes */}
           <Route path="vendor/profile" element={<VendorProfile />}>
             <Route index element={<InformationContent />} />
             <Route path="projects" element={<VendorProjects />}>
@@ -66,6 +76,15 @@ function App() {
             </Route>
             <Route path="banquets" element={<Banquets />} />
           </Route>
+          {/* User Profile Routes */}
+          <Route path="user/profile" element={<UserProfile />}>
+            <Route index element={<UserLove />} />
+            <Route path="checklists" element={<UserChecklists />} />
+            <Route path="shortlists" element={<UserShortlists />} />
+            <Route path="finalize-vendor" element={<UserFinalizeVendor />} />
+            <Route path="settings" element={<UserSettings />} />
+          </Route>
+          <Route path="setup-wedding" element={<WeddingSetup />} />
           <Route path="/imageupload/guideline" element={<Guidelines />} />
           <Route path="contact" element={<Contact />} />
           <Route path="blog-view" element={<Blog />} />
