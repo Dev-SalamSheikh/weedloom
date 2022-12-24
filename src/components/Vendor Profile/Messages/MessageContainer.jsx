@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import MessageSender from "./MessageSender";
 
-const MessageContainer = () => {
+const MessageContainer = ({ border, user }) => {
   const senderData = [
     {
       id: 1,
@@ -145,7 +145,11 @@ const MessageContainer = () => {
     },
   ];
   return (
-    <div className="w-full max-h-[75vh] flex">
+    <div
+      className={`${
+        border && "border border-paginationBg-900 border-b-0"
+      } w-full max-h-[75vh] flex`}
+    >
       {/* Left Side */}
       <div className="w-full md:w-[35%] lg:w-[25%] h-full border-r-paginationBg-900 border-r">
         {/* <MessageSidebar /> */}
@@ -178,9 +182,7 @@ const MessageContainer = () => {
           <div className="block md:hidden">
             {senderData.map((data) => (
               <NavLink
-                to={`/vendor/profile/mobilemessage/${data.name
-                  .split(" ")
-                  .splice(0, 1)}`}
+                to={`/mobilemessage/${data.name.split(" ").splice(0, 1)}`}
               >
                 <MessageSender
                   img={data.img}

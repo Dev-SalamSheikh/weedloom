@@ -38,6 +38,7 @@ import UserLove from "./components/user profile/UserLove";
 import UserChecklists from "./components/user profile/UserChecklists";
 import WeddingSetup from "./components/Wedding Setup/WeddingSetup";
 import ScrollToTop from "./ScrollToTop";
+import UserMessages from "./components/user profile/UserMessages";
 
 function App() {
   return (
@@ -84,6 +85,12 @@ function App() {
             <Route path="finalize-vendor" element={<UserFinalizeVendor />} />
             <Route path="settings" element={<UserSettings />} />
           </Route>
+          {/* User Message Route */}
+          <Route path="user/inbox" element={<UserMessages />}>
+            <Route index element={<GetBackMsg />} />
+            <Route path=":id" element={<Chatbox />} />
+          </Route>
+          <Route path="mobilemessage/:id" element={<MobileMessage />} />
           <Route path="setup-wedding" element={<WeddingSetup />} />
           <Route path="/imageupload/guideline" element={<Guidelines />} />
           <Route path="contact" element={<Contact />} />

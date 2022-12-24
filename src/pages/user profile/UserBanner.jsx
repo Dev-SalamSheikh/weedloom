@@ -20,7 +20,7 @@ const UserBanner = () => {
         <div
           className="absolute top-[50%] left-[50%]"
           style={{
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-50%, -100%)",
           }}
         >
           <h1 className="text-white text-4xl font-medium">Junaid Weds</h1>

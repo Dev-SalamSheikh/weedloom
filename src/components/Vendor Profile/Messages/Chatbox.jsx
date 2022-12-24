@@ -2,7 +2,7 @@ import React from "react";
 import CustomarMessage from "./CustomarMessage";
 import VendorMessage from "./VendorMessage";
 
-const Chatbox = () => {
+const Chatbox = ({ user }) => {
   return (
     <div className="max-h-[75vh] w-full">
       {/* Header */}
@@ -43,7 +43,7 @@ const Chatbox = () => {
       <div
         className="w-full flex justify-end flex-col"
         style={{
-          height: "calc(75vh - 60px)",
+          height: `${user ? "calc(100vh - 60px)" : "calc(75vh - 60px)"}`,
         }}
       >
         {/* Messages */}

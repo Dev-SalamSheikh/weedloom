@@ -26,12 +26,12 @@ const PvenueCarousel = ({
             <div className="single__links my-1">
               <div className="fristTwoAnswer flex gap-3 items-start">
                 <NavLink to={link1}>
-                  <span className="hover:font-semibold">
+                  <span className="hover:font-semibold text-xs md:text-base">
                     {link1Text ? link1Text : "Link One"} |
                   </span>
                 </NavLink>
                 <NavLink to={link2}>
-                  <span className="hover:font-semibold">
+                  <span className="hover:font-semibold text-xs md:text-base">
                     {link2Text ? link2Text : "Link Two"} |
                   </span>
                 </NavLink>
@@ -39,19 +39,19 @@ const PvenueCarousel = ({
 
               <div className="secondTwoAnswer flex gap-3 items-start">
                 <NavLink to={link3}>
-                  <span className="hover:font-semibold">
+                  <span className="hover:font-semibold text-xs md:text-base">
                     {link3Text ? link3Text : "Link Three"} |
                   </span>
                 </NavLink>
                 <NavLink to={link4}>
-                  <span className="hover:font-semibold">
+                  <span className="hover:font-semibold text-xs md:text-base">
                     {link4Text ? link4Text : "Link Four"} |
                   </span>
                 </NavLink>
               </div>
             </div>
             <NavLink to={link5}>
-              <span className="underline hover:font-semibold">
+              <span className="underline hover:font-semibold text-xs md:text-base">
                 All Location
               </span>
             </NavLink>

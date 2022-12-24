@@ -2,9 +2,10 @@ import React from "react";
 import Chatbox from "./Chatbox";
 
 const MobileMessage = () => {
+  const user = true;
   return (
     <div>
-      <Chatbox />
+      <Chatbox user={user} />
     </div>
   );
 };

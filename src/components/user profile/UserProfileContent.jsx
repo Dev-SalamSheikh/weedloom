@@ -19,23 +19,6 @@ const UserProfileContent = () => {
           <div className="w-full lg:w-[15%]">
             {/* Toggle Card */}
             <div className="px-5 lg:py-6 py-2 flex flex-col gap-5 bg-white shadow-sm w-full rounded-sm">
-              {/* Love */}
-              <NavLink
-                to="/user/profile"
-                style={({ isActive }) =>
-                  isActive ? activeStyle : defaultStyle
-                }
-                end
-              >
-                <div
-                  className={`flex items-center gap-3 cursor-pointer hover:text-[#00aef7] duration-100`}
-                >
-                  <span className="text-xs md:text-sm font-medium ml-1">
-                    Loves
-                  </span>
-                </div>
-              </NavLink>
-
               {/* Setup Your wedding */}
               <NavLink
                 to="/setup-wedding"
@@ -49,6 +32,40 @@ const UserProfileContent = () => {
                 >
                   <span className="text-xs md:text-sm font-medium ml-1">
                     Setup Your Wedding
+                  </span>
+                </div>
+              </NavLink>
+
+              {/* Messages */}
+              <NavLink
+                to="/user/inbox"
+                style={({ isActive }) =>
+                  isActive ? activeStyle : defaultStyle
+                }
+                end
+              >
+                <div
+                  className={`flex items-center gap-3 cursor-pointer hover:text-[#00aef7] duration-100`}
+                >
+                  <span className="text-xs md:text-sm font-medium ml-1">
+                    Messages
+                  </span>
+                </div>
+              </NavLink>
+
+              {/* Love */}
+              <NavLink
+                to="/user/profile"
+                style={({ isActive }) =>
+                  isActive ? activeStyle : defaultStyle
+                }
+                end
+              >
+                <div
+                  className={`flex items-center gap-3 cursor-pointer hover:text-[#00aef7] duration-100`}
+                >
+                  <span className="text-xs md:text-sm font-medium ml-1">
+                    Loves
                   </span>
                 </div>
               </NavLink>
