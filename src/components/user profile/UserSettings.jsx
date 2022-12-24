@@ -39,9 +39,9 @@ const UserSettings = () => {
     <div className="bg-sectionBg-900 py-4 px-8 flex flex-col justify-center items-center">
       {showPop && (
         <div className="w-screen h-screen fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-[100000]">
-          <div className="w-3/12 bg-white shadow-lg px-8 py-4 rounded-md relative">
+          <div className="w-11/12 md:w-3/12 bg-white shadow-lg px-4 md:px-8 py-4 rounded-md relative">
             {/* Heading */}
-            <h2 className="text-xl font-semibold text-textSecondary-900">
+            <h2 className="text-base md:text-xl font-semibold text-textSecondary-900">
               Set Password
             </h2>
 
@@ -81,7 +81,7 @@ const UserSettings = () => {
 
             <div className="w-full mt-6 text-center">
               <button
-                className="w-6/12 bg-textPrimary-900 text-white py-3 rounded-md font-semibold"
+                className="w-6/12 bg-textPrimary-900 text-white py-3 md:text-base text-xs rounded-md font-semibold"
                 onClick={newPassword}
                 disabled={
                   (userData.password.length < 4 &&
@@ -157,7 +157,7 @@ const UserSettings = () => {
         )}
 
         {editName && (
-          <div className="w-5/12 flex items-center justify-between gap-4">
+          <div className="w-full md:w-5/12 flex items-center justify-between gap-4">
             <div className="w-full bg-white p-2 shadow-sm rounded-md">
               <input
                 type="text"
@@ -190,7 +190,7 @@ const UserSettings = () => {
             male
               ? "text-white bg-textPrimary-900"
               : "text-textPrimary-900 bg-transparent"
-          } border border-textPrimary-900 w-24 text-center py-2 font-semibold cursor-pointer text-sm`}
+          } border border-textPrimary-900 w-16 md:w-24 text-center py-2 font-semibold cursor-pointer text-xs md:text-sm`}
           onClick={maleSelect}
         >
           <span>Male</span>
@@ -202,7 +202,7 @@ const UserSettings = () => {
             female
               ? "text-white bg-textPrimary-900"
               : "text-textPrimary-900 bg-transparent"
-          } border border-textPrimary-900 border-l-0 w-24 text-center py-2 font-semibold cursor-pointer text-sm`}
+          } border border-textPrimary-900 border-l-0 w-16 md:w-24 text-center py-2 font-semibold cursor-pointer text-xs md:text-sm`}
           onClick={femaleSelect}
         >
           <span>Female</span>
@@ -210,14 +210,14 @@ const UserSettings = () => {
       </div>
 
       {/* Form Content */}
-      <div className="w-full flex justify-center mt-12">
+      <div className="w-full flex justify-center md:mt-12 mt-4">
         <form className="w-full">
           {/* Email Address */}
-          <div className="w-7/12 mx-auto mb-4">
+          <div className="w-full md:w-7/12 mx-auto mb-4">
             <label htmlFor="email" className="text-xs font-bold text-gray-500">
               Email Address
             </label>
-            <div className="w-full bg-white shadow-sm py-3 text-sm border border-paginationBg-900 px-4 text-textSecondary-900 mt-1 rounded-sm">
+            <div className="w-full bg-white shadow-sm py-3 text-xs md:text-sm border border-paginationBg-900 px-4 text-textSecondary-900 mt-1 rounded-sm">
               <input
                 id="email"
                 type="email"
@@ -229,11 +229,11 @@ const UserSettings = () => {
           </div>
 
           {/* Phone Number */}
-          <div className="w-7/12 mx-auto mb-4">
+          <div className="w-full md:w-7/12 mx-auto mb-4">
             <label htmlFor="number" className="text-xs font-bold text-gray-500">
               Set Phone Number
             </label>
-            <div className="w-full bg-white shadow-sm py-3 text-sm border border-paginationBg-900 px-4 text-textSecondary-900 mt-1 rounded-sm">
+            <div className="w-full bg-white shadow-sm py-3 text-xs md:text-sm border border-paginationBg-900 px-4 text-textSecondary-900 mt-1 rounded-sm">
               <input
                 id="number"
                 type="number"
@@ -250,7 +250,7 @@ const UserSettings = () => {
           </div>
 
           {/* Password */}
-          <div className="w-7/12 mx-auto mb-4">
+          <div className="w-full md:w-7/12 mx-auto mb-4">
             <label
               htmlFor="password"
               className="text-xs font-bold text-gray-500"
@@ -258,7 +258,7 @@ const UserSettings = () => {
               Set Password
             </label>
             <div
-              className="w-full bg-white shadow-sm py-3 text-sm border border-paginationBg-900 px-4 text-textSecondary-900 mt-1 rounded-sm"
+              className="w-full bg-white shadow-sm py-3 text-xs md:text-sm border border-paginationBg-900 px-4 text-textSecondary-900 mt-1 rounded-sm"
               onClick={() => setShowPop(true)}
             >
               <input
@@ -273,16 +273,11 @@ const UserSettings = () => {
       </div>
 
       {/* Buttons */}
-      <div className="w-full flex justify-center items-center flex-col gap-4 mt-8">
+      <div className="w-full flex justify-center items-center flex-col gap-4 mt-4 md:mt-8">
         {/* Save Button */}
         <div className="w-full text-center">
-          <button className="w-3/12 bg-textPrimary-900 text-white py-3 rounded-md font-semibold text-sm">
+          <button className="w-6/12 md:w-3/12 bg-textPrimary-900 text-white py-3 rounded-md font-semibold text-xs md:text-sm">
             Save Changes
-          </button>
-        </div>
-        <div>
-          <button className="text-textPrimary-900 font-semibold">
-            <i className="fa-solid fa-right-from-bracket mr-1"></i>logout
           </button>
         </div>
       </div>

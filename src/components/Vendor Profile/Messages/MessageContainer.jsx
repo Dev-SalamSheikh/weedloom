@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import MessageSender from "./MessageSender";
 
-const MessageContainer = ({ border, user }) => {
+const MessageContainer = ({ border }) => {
   const senderData = [
     {
       id: 1,

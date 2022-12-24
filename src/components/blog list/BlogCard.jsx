@@ -172,7 +172,7 @@ const BlogCard = () => {
 
                   {/* Blog Header */}
                   <NavLink to="/blog-view">
-                    <div className="header mt-8 px-4 overflow-hidden h-[140px]">
+                    <div className="header mt-8 px-4 overflow-hidden h-full max-h-[145px] pb-2">
                       <h1 className="text-textSecondary-900 font-medium font-serif text-2xl lg:text-3xl cursor-pointer capitalize">
                         {title}
                       </h1>

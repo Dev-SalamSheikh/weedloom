@@ -16,6 +16,7 @@ const UserFinalizeVendor = () => {
         <ShortListCard
           image="https://www.thetorrancehotel.co.uk/wp-content/uploads/2020/02/torrance-wedding-suite-feb-hero.jpg"
           name="Hotel Grand Maple"
+          price="30,000"
         />
       </div>
     </div>

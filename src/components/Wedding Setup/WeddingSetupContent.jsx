@@ -4,14 +4,14 @@ import WeeddingContentCard from "./WeeddingContentCard";
 const WeddingSetupContent = () => {
   return (
     <div className="w-full h-full bg-sectionBg-900">
-      <div className="container mx-auto w-6/12 pt-10 pb-16">
+      <div className="container mx-auto lg:w-6/12 w-11/12 pt-10 pb-16">
         {/* Heading */}
-        <h1 className="text-textPrimary-900 text-[28px] font-medium text-center">
+        <h1 className="text-textPrimary-900 text-xl lg:text-[28px] font-medium text-center">
           Why should you sign up?
         </h1>
 
         {/*Card Container */}
-        <div className="grid grid-cols-4 gap-4 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 pt-10">
           <WeeddingContentCard
             img="https://www.svgrepo.com/show/37043/mail.svg"
             title="Inbox"

@@ -66,7 +66,7 @@ const Chatbox = ({ user }) => {
         </div>
 
         {/* SendBox */}
-        <div className="bg-white h-[74px] lg:px-4 px-1 flex justify-between items-center">
+        <div className="bg-white h-[74px] lg:px-4 px-1 flex justify-between items-center border-b border-b-paginationBg-900">
           {/* Upper Part */}
           <div className="w-full border border-paginationBg-900 flex gap-4 items-center justify-between px-2 rounded-l">
             <div className="w-full">

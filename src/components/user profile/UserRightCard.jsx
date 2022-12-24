@@ -14,7 +14,9 @@ const UserRightCard = ({ bg, link, text, margin }) => {
       {/* Text */}
       <NavLink to={`/${link}`}>
         <div className="w-full h-full bg-black bg-opacity-60 text-white cursor-pointer flex justify-center items-center">
-          <h1 className="text-lg font-medium capitalize">{text}</h1>
+          <h1 className="text-base md:text-lg font-medium capitalize">
+            {text}
+          </h1>
         </div>
       </NavLink>
     </div>

@@ -5,19 +5,19 @@ const UserLoveCard = ({ image, authorimg, authorname }) => {
     <div className="w-full">
       {/* Heading */}
       <div className="p-4 border-b border-b-paginationBg-900">
-        <h2 className="text-base tracking-widest text-textSecondary-900 leading-none">
+        <h2 className="text-sm lg:text-base tracking-widest text-textSecondary-900 leading-none">
           10 Dec, 2022
         </h2>
       </div>
 
       {/* Content */}
-      <div className="m-8 border border-paginationBg-900 rounded-sm">
+      <div className="m-2 lg:m-8 border border-paginationBg-900 rounded-sm">
         {/* Image */}
-        <div className="m-4">
+        <div className="m-2 lg:m-4">
           <img
             src={image}
             alt=""
-            className="max-h-[800px] w-full object-cover rounded-md"
+            className="h-[300px] lg:h-[500px] w-full lg:w-6/12 object-cover rounded-md mx-auto"
           />
         </div>
 
