@@ -29,6 +29,7 @@ const Navbar = () => {
   const [photo, setPhoto] = useState(false);
   const [shop, setShop] = useState(false);
   const [allCities, setAllCities] = useState(false);
+  const [profilePopup, setProfilePopup] = useState(false);
 
   const handleAllCities = () => {
     setAllCities(!allCities);
@@ -39,6 +40,7 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div className="desktop_nav hidden xl:block">
         <div className="navbar bg-navbarBGL-900 flex justify-between items-center md:px-12 text-white py-4 md:py-0 px-2">
+          {/* Left Side */}
           <div className="navbar__left flex items-center w-7/12">
             <div className="navbar__logo">
               <NavLink to="/">
@@ -109,7 +111,9 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div className="navbar__right flex gap-6 items-center justify-end w-5/12">
+
+          {/* Right Side */}
+          <div className="navbar__right flex gap-6 items-center justify-end w-5/12 relative">
             <div className="search__icon bg-headerBG-900 py-1 px-2 rounded-full">
               <NavLink to="/search">
                 <i className="fa-solid fa-magnifying-glass text-sm"></i>
@@ -125,12 +129,89 @@ const Navbar = () => {
               </NavLink>
             </div> */}
 
+            {/* Login Button */}
             <div className="login__btn">
               <NavLink to="/login">
                 <button className="bg-headerBG-900 py-1 px-10 rounded-full font-semibold">
                   Login
                 </button>
               </NavLink>
+            </div>
+
+            {/* Profile Tab */}
+            <div className="flex justify-center items-center relative">
+              {/* Avatar */}
+              <div
+                className="flex items-center gap-2 cursor-pointer"
+                onClick={() => setProfilePopup(!profilePopup)}
+              >
+                <img
+                  src="https://pickaface.net/gallery/avatar/unr_handsomeboy_180407_1616_z233f.png"
+                  alt="avatar"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <i className="fa-solid fa-caret-down"></i>
+              </div>
+
+              {/* Popup */}
+              {profilePopup && (
+                <div className="bg-white text-black w-[200px] absolute top-[125%] right-0 z-[1000] shadow-sm border border-paginationBg-900 border-t-0">
+                  {/* Profile */}
+                  <NavLink to="/user/profile">
+                    <div className="bg-carouselBG-900 p-2 flex gap-2 items-center justify-between">
+                      {/* Image */}
+                      <div className="w-4/12">
+                        <img
+                          src="https://pickaface.net/gallery/avatar/unr_handsomeboy_180407_1616_z233f.png"
+                          alt="avatar"
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                      </div>
+
+                      <div className="w-full">
+                        <span className="text-sm text-textSecondary-900 font-medium">
+                          Junaid Asghar
+                        </span>
+                        <p className="text-xs text-textPrimary-900 font-medium">
+                          Profile
+                        </p>
+                      </div>
+                    </div>
+                  </NavLink>
+
+                  {/* Others Item */}
+                  <div className="py-2">
+                    <div className="px-4 mb-2">
+                      <NavLink to="/setup-wedding">
+                        <span className="text-textSecondary-900 font-medium text-sm hover:font-semibold">
+                          Setup Your Wedding
+                        </span>
+                      </NavLink>
+                    </div>
+                    <div className="px-4 mb-2">
+                      <NavLink to="/user/inbox">
+                        <span className="text-textSecondary-900 font-medium text-sm hover:font-semibold">
+                          Inbox
+                        </span>
+                      </NavLink>
+                    </div>
+                    <div className="px-4 mb-2">
+                      <NavLink to="/user/profile/settings">
+                        <span className="text-textSecondary-900 font-medium text-sm hover:font-semibold">
+                          Settings
+                        </span>
+                      </NavLink>
+                    </div>
+                    <div className="px-4 mb-2">
+                      <NavLink to="/">
+                        <span className="text-textSecondary-900 font-medium text-sm hover:font-semibold">
+                          Logout
+                        </span>
+                      </NavLink>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -186,12 +267,26 @@ const Navbar = () => {
             </div>
 
             <div className="sign_in px-4 border-b border-paginationBg-900 pb-4">
-              <NavLink to="/signup">
-                <span className="text-textPrimary-900 font-semibold text-lg">
-                  <NavLink to="/login">Sign In</NavLink>{" "}
-                  <span className="text-textSecondary-900 px-2">/</span>{" "}
-                  <NavLink to="/signup">Sign Up</NavLink>
-                </span>
+              <NavLink to="/user/profile">
+                <div className="flex gap-2 items-center justify-between">
+                  {/* Image */}
+                  <div className="w-4/12">
+                    <img
+                      src="https://pickaface.net/gallery/avatar/unr_handsomeboy_180407_1616_z233f.png"
+                      alt="avatar"
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                  </div>
+
+                  <div className="w-full">
+                    <span className="text-sm text-textSecondary-900 font-medium">
+                      Junaid Asghar
+                    </span>
+                    <p className="text-xs text-textPrimary-900 font-medium">
+                      Profile
+                    </p>
+                  </div>
+                </div>
               </NavLink>
             </div>
 
